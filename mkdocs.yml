@@ -50,6 +50,7 @@ nav:
     - Services:
         - services/services.md
         - HedgeDoc: services/hedgedoc.md
+        - Media: services/media.md
         - Paperless: services/paperless.md
         - Unifi-Controller: services/unifi-controller.md
     - Hardware:
