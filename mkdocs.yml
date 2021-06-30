@@ -47,6 +47,7 @@ markdown_extensions:
 
 nav:
     - Home: index.md
+    - Procedures: procedures.md
     - Services:
         - services/services.md
         - HedgeDoc: services/hedgedoc.md
