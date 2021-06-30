@@ -1,4 +1,4 @@
-site_name: James Hackett Homelab
+site_name: Homelab Documentation
 site_description: Documentation for my homelab
 site_url: https://docs.james-hackett.ie/
 
@@ -6,44 +6,47 @@ repo_name: DistroByte/docs
 repo_url: https://github.com/DistroByte/docs
 
 theme:
-  logo: assets/logo.png
-  favicon: assets/favicon.png
-  name: material
-  features:
-    - navigation.sections
-    - navigation.tabs
-    - navigation.expand
-    - navigation.indexes
-    - navigation.top
-    - search.highlight
-    - search.share
-    - search.suggest
-  palette:
-    - media: '(prefers-color-scheme: light)'
-      scheme: default
-      primary: black
-      accent: red
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-    - media: '(prefers-color-scheme: dark)'
-      scheme: slate
-      primary: black
-      accent: red
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode
+    logo: assets/logo.png
+    favicon: assets/favicon.png
+    name: material
+    features:
+        - navigation.sections
+        - navigation.tabs
+        - navigation.expand
+        - navigation.indexes
+        - navigation.top
+        - search.highlight
+        - search.share
+        - search.suggest
+    palette:
+        - media: '(prefers-color-scheme: light)'
+          scheme: default
+          primary: black
+          accent: red
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        - media: '(prefers-color-scheme: dark)'
+          scheme: slate
+          primary: black
+          accent: red
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
 
 plugins:
-  - search
+    - search
 
 markdown_extensions:
-  - toc:
-      permalink: true
-  - attr_list
-  - codehilite:
-      guess_lang: false
-  - pymdownx.critic
+    - toc:
+          permalink: true
+    - attr_list
+    - codehilite:
+          guess_lang: false
+    - pymdownx.critic
 
 nav:
-  - Home: index.md 
+    - Home: index.md
+    - Services:
+          - services/services.md
+          - HedgeDoc: services/hedgedoc.md
