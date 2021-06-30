@@ -48,5 +48,13 @@ markdown_extensions:
 nav:
     - Home: index.md
     - Services:
-          - services/services.md
-          - HedgeDoc: services/hedgedoc.md
+        - services/services.md
+        - HedgeDoc: services/hedgedoc.md
+        - Paperless: services/paperless.md
+        - Unifi-Controller: services/unifi-controller.md
+    - Hardware:
+        - hardware/hardware.md
+    - Hosts:
+        - hosts/hosts.md
+    - Images:
+        - images/images.md

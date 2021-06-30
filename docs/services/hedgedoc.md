@@ -1,7 +1,10 @@
 # HedgeDoc
 
-HedgeDoc is running on Hermes in a docker container. It is available [here](https://md.james-hackett.ie).
+HedgeDoc is running on Hermes in a docker container. HedgeDoc is a web editor for markdown notes and contains everything
+from college notes to personal journal entries and todo lists. It is available [here](https://md.james-hackett.ie).
 
+The repository which the container is from is located on the [hedgedoc/container](https://github.com/hedgedoc/container)
+repo.
 
 ## Configuration
 
@@ -92,16 +95,24 @@ server {
 HedgeDoc is backed up every 6 hours to `/volume1/backups/hedgedoc/` on Dionysus. The files are then kept for 28 days
 before being removed. A notification of the backup is sent to Discord with the time of backup as well as the file size.
 
-The script which cron runs is shown below.
+The script which `cron` runs is shown below. It execs into the hedgedoc-database container and runs `pg_dump`. This is
+then sent to the mounted backup folder. The script then removes files older than 28 days and gets the file size of the most
+recent backup. Finally a notification is sent to Discord.
 
 ```bash
 #!/bin/bash
 
-docker exec hedgedoc-database pg_dump hedgedoc -U hedgedoc > /etc/docker-compose/hedgedoc-container/backups/hedgedoc-$(date +%Y-%m-%d_%H-%M-%S).sql
+docker exec hedgedoc-database pg_dump hedgedoc -U hedgedoc > /etc/docker-compose/
+hedgedoc-container/backups/hedgedoc-$(date +%Y-%m-%d_%H-%M-%S).sql
 
-find /etc/docker-compose/hedgedoc-container/backups/hedgedoc* -ctime +28 -exec rm {} \;
+find /etc/docker-compose/hedgedoc-container/backups/hedgedoc* -ctime +28 -exec
+rm {} \;
 
-file=$(find /etc/docker-compose/hedgedoc-container/backups/hedgedoc* -ctime -0.24 -exec du -sh {} \; | cut -f1 | xargs | sed 's/.$//')
+file=$(find /etc/docker-compose/hedgedoc-container/backups/hedgedoc* -ctime -0.24
+-exec du -sh {} \; | cut -f1 | xargs | sed 's/$//')
 
-curl -H "Content-Type: application/json" -d '{"content": "-----------------\n**Hedgedoc Backup**\n-----------------\n`Hedgedoc` has just been backed up!\nFile size: `'"$file"'` megabytes\nDate: `'"$(TZ=Europe/Dublin date)"'`"}' https://canary.discord.com/api/webhooks/$webhook_url
+curl -H "Content-Type: application/json" -d '{"content": "-----------------\n**
+Hedgedoc Backup**\n-----------------\n`Hedgedoc` has just been backed up!\nFile
+size: `'"$file"'`\nDate: `'"$(TZ=Europe/Dublin date)"'`"}' 
+https://canary.discord.com/api/webhooks/$webhook_url
 ```

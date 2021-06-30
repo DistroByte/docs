@@ -13,7 +13,7 @@ If you would like to get in contact with me, you can contact me on:
 
 ## Quicklinks
 
-- [Services](/services/services.md)
+- [Services](services/services.md)
 - [Hosts](hosts/hosts.md)
 - [Hardware](hardware/hardware.md)
 - [Images](images/images.md)
