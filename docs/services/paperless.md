@@ -3,14 +3,14 @@
 Paperless-ng is running on Hermes in a docker container. Paperless-ng is
 a place where scanned documents like bills and statements can be stored to reduce the amount of paper in use. It can
 automatically tag a new document when it arrives and provides OCR on the document to allow it to be searched easily.
-It is available [here](https://paperless.james-hackett.ie)
+It is available [here](https://paperless.james-hackett.ie).
 
 Paperless-ng is a variation on the original [paperless](https://github.com/the-paperless-project/paperless) project,
 which was archived. The container and its dependencies are installed with a
 [script from the documentation](https://paperless-ng.readthedocs.io/en/latest/setup.html#setup-docker-script). This
-script is located at `/etc/docker-compose/install-paperless-ng.sh`
+script is located at `/etc/docker-compose/install-paperless-ng.sh`.
 
-The repo for Paperless-ng is [here](https://github.com/jonaswinkler/paperless-ng)
+The repo for Paperless-ng is [here](https://github.com/jonaswinkler/paperless-ng).
 
 ## Configuration
 

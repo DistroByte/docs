@@ -1,4 +1,4 @@
-# Prefix
+# Preface
 
 This section will list all the services I run inside my homelab, how they are implemented (configs, notes, etc) and
 links to documentation on the service.
