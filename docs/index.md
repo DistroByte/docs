@@ -29,9 +29,7 @@ It also allows Factorio console commands to be run from Discord. You can view th
 
 ## Quicklinks
 
-- [Procedures](procedures.md)
 - [Services](services/services.md)
-- [Hosts](hosts/hosts.md)
 - [Hardware](hardware/hardware.md)
 - [Images](images/images.md)
 - [ComfyBot](https://github.com/DistroByte/ComfyBot)

@@ -56,7 +56,10 @@ nav:
         - Unifi-Controller: services/unifi-controller.md
     - Hardware:
         - hardware/hardware.md
-    - Hosts:
-        - hosts/hosts.md
+        - Dell OptiPlex 7040: hardware/optiplex7040.md
+        - PC: hardware/pc.md
+        - Raspberry Pi: hardware/raspi.md
+        - Synology DS920+: hardware/ds920plus.md
+        - Ubiquiti Switch: hardware/switch.md
     - Images:
         - images/images.md
