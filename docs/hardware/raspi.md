@@ -26,3 +26,5 @@ When listing what services are running, the hostname will be listed beside it.
 ## Images
 
 ![Raspis with cases](https://i.dbyte.xyz/2021-07-A4.jpg)
+
+<!-- TODO: add completed mages from `google photos` to this page -->

@@ -17,3 +17,7 @@ The services running on the Synology DS920+ are listed here. This list is update
 | Service Name |
 | ------------ |
 | |
+
+## Images
+
+<!-- TODO: add images from `pictures/computer setups` to this page -->

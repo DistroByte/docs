@@ -20,9 +20,18 @@ When listing what services are running, the hostname will be listed beside it.
 | ------------ | -------------- |
 | |  |
 
-## Converting from Windows to New OS
+## Notes
+
+### Converting from Windows to New OS
 
 1. Create a bootable USB with desired operating system
 2. When booting up, press F2
 3. Allow "boot from USB" in BIOS
 4. Follow installer instructions
+
+## Images
+
+![Optiplex](https://i.dbyte.xyz/2021-07-Iv.jpg)
+![Optiplex](https://i.dbyte.xyz/2021-07-EX.jpg)
+![Optiplex](https://i.dbyte.xyz/2021-07-00.jpg)
+<!-- TODO: add images from `pictures/computer setups` to this page -->
