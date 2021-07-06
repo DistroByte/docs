@@ -1,4 +1,4 @@
-# Dell OptiPlex 7040
+# Dell OptiPlex 7040 // Zeus + Hermes
 
 These small servers are perfect for an ITX sized homelab. They provide enough computing power for most tasks
 and combined have 16GB of RAM. These servers were the first of my actual hardware I bought.
@@ -6,7 +6,7 @@ and combined have 16GB of RAM. These servers were the first of my actual hardwar
 ## Hardware
 
 - 8GB RAM
-- 1x with 500GB HDD, 1x with 250GB SSD
+- 1x with 500GB HDD (Hermes), 1x with 250GB SSD (Zeus)
 - 1x Intel(R) Core(TM) i5-6500T CPU @ 2.50GHz
 
 ## Services
@@ -18,7 +18,11 @@ When listing what services are running, the hostname will be listed beside it.
 
 | Service Name | Hostname       |
 | ------------ | -------------- |
-| |  |
+| Nginx | Zeus, Hermes |
+| Unifi Controller | Hermes |
+| Paperless-ng | Hermes |
+| HedgeDoc | Hermes |
+| ddclient | Hermes |
 
 ## Notes
 
@@ -34,4 +38,3 @@ When listing what services are running, the hostname will be listed beside it.
 ![Optiplex](https://i.dbyte.xyz/2021-07-Iv.jpg)
 ![Optiplex](https://i.dbyte.xyz/2021-07-EX.jpg)
 ![Optiplex](https://i.dbyte.xyz/2021-07-00.jpg)
-<!-- TODO: add images from `pictures/computer setups` to this page -->

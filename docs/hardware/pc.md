@@ -76,7 +76,7 @@ All of these add up to produce a set up that looks like this
 
 ![Keyboard](https://i.dbyte.xyz/2021-07-NO.jpg)
 
-### PC
+### Case
 
 ![PC Side](https://i.dbyte.xyz/2021-07-i1.jpg)
 ![PC Side](https://i.dbyte.xyz/2021-07-cl.jpg)

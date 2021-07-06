@@ -50,8 +50,10 @@ nav:
     - Procedures: procedures.md
     - Services:
         - services/services.md
+        - DDClient: services/ddclient.md
         - HedgeDoc: services/hedgedoc.md
         - Media: services/media.md
+        - Nginx: services/nginx.md
         - Paperless: services/paperless.md
         - Unifi-Controller: services/unifi-controller.md
     - Hardware:
@@ -63,3 +65,4 @@ nav:
         - PC: hardware/pc.md
     - Images:
         - images/images.md
+    - Todo: todo.md

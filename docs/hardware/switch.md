@@ -1,5 +1,6 @@
-# Ubiquiti 16 Port Switch PoE Lite
+# Ubiquiti 16 Port Switch PoE Lite // Hades
 
 ## Images
 
-<!-- TODO: add images from `google photos` to this page -->
+![Switch](https://i.dbyte.xyz/2021-07-Ej.jpg)
+![Switch with cables](https://i.dbyte.xyz/2021-07-dt.jpg)

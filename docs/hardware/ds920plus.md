@@ -1,4 +1,4 @@
-# Synology DS920+
+# Synology DS920+ // Dionysus
 
 The Synology DS920+ was my biggest investment for my homelab. It cost upwards of €1,200 for both the server and
 the storage disks. However, this was one of the best investments I've made. It will last for a long time and
@@ -16,8 +16,15 @@ The services running on the Synology DS920+ are listed here. This list is update
 
 | Service Name |
 | ------------ |
-| |
+| [heimdall](http://192.168.1.18) (home/landing page) |
+| [deluge](http://192.168.1.18:8112) |
+| [jackett](http://192.168.1.18:9117) |
+| [nzbget](http://192.168.1.18:6789) |
+| [plex](http://192.168.1.18:5190) |
+| [sonarr](http://192.168.1.18:8989) |
+| [radarr](http://192.168.1.18:7878) |
 
 ## Images
 
-<!-- TODO: add images from `pictures/computer setups` to this page -->
+![Synology](https://i.dbyte.xyz/2021-07-v2.jpg)
+![Disks](https://i.dbyte.xyz/2021-07-a7.jpg)

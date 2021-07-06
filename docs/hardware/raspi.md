@@ -1,4 +1,4 @@
-# Raspberry Pi
+# Raspberry Pi // Apollo + Artemis
 
 The standard device in almost any homelab, you can never have enough of them until you have too many.
 Luckily for me I only have 2. They both have PoE+ hats that allow them to be connected to the internet
@@ -26,5 +26,4 @@ When listing what services are running, the hostname will be listed beside it.
 ## Images
 
 ![Raspis with cases](https://i.dbyte.xyz/2021-07-A4.jpg)
-
-<!-- TODO: add completed mages from `google photos` to this page -->
+![Raspi Hats](https://i.dbyte.xyz/2021-07-B7.jpg)
