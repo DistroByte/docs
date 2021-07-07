@@ -26,11 +26,11 @@ Run `sudo service lighttpd restart` to apply change.
 
 - planned network config
     - .1 router
-    - .2 zeus (optiplex)
-    - .3 hermes (optiplex)
-    - .4 dionysus (NAS)
-    - .5 artemis (raspi 4b)
-    - .6 apollo (raspi 4b)
-    - .7 ares (odroid)
+    - .3 zeus (optiplex)
+    - .4 hermes (optiplex)
+    - .5 dionysus (NAS)
+    - .6 artemis (raspi 4b)
+    - .7 apollo (raspi 4b)
+    - .8 ares (odroid)
     - .10 poseidon (james pc)
     - .20 bobmarley (printer)
