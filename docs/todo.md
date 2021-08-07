@@ -26,6 +26,7 @@ Run `sudo service lighttpd restart` to apply change.
 
 - planned network config
     - .1 router
+    - .2 hades (switch)
     - .3 zeus (optiplex)
     - .4 hermes (optiplex)
     - .5 dionysus (NAS)
