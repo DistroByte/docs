@@ -16,13 +16,12 @@ The services running on the Synology DS920+ are listed here. This list is update
 
 | Service Name |
 | ------------ |
-| [heimdall](http://192.168.1.18) (home/landing page) |
-| [deluge](http://192.168.1.18:8112) |
-| [jackett](http://192.168.1.18:9117) |
-| [nzbget](http://192.168.1.18:6789) |
-| [plex](http://192.168.1.18:5190) |
-| [sonarr](http://192.168.1.18:8989) |
-| [radarr](http://192.168.1.18:7878) |
+| [heimdall](http://dionysus) (home/landing page) |
+| [deluge](http://dionysus:8112) |
+| [jackett](http://dionysus:9117) |
+| [plex](http://dionysus:5190) |
+| [sonarr](http://dionysus:8989) |
+| [radarr](http://dionysus:7878) |
 
 ## Images
 
