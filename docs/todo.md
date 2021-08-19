@@ -25,7 +25,7 @@ Run `sudo service lighttpd restart` to apply change.
 
 ## Network Topology
 
-- network config
+- Hardware
     - .1 router
     - .2 hades (switch)
     - .3 zeus (optiplex)
@@ -36,6 +36,11 @@ Run `sudo service lighttpd restart` to apply change.
     - .8 ares (odroid)
     - .10 poseidon (james pc)
     - .20 bobmarley (printer)
+
+- VMs
+    - hera - 4core 24GB
+    - aphrodite - 1core 1GB
+    - persephone - 1core 1GB
 
 - Other hardware names
     - ares
@@ -50,11 +55,6 @@ Run `sudo service lighttpd restart` to apply change.
     - pan
     - castor // polux
     - proemtheus
-
-- VMs
-    - hera - 4core 24GB
-    - aphrodite - 1core 1GB
-    - persephone - 1core 1GB
 
 - Other VM names
     - demeter
