@@ -16,6 +16,7 @@
     - Kapacitor
     - Chronograph
 - Implement docs.james-hackett.ie with mkdocs-material
+- [Expose overseerr](https://docs.overseerr.dev/extending-overseerr/reverse-proxy)
 
 ## Notes
 
@@ -24,7 +25,7 @@ Run `sudo service lighttpd restart` to apply change.
 
 ## Network Topology
 
-- planned network config
+- network config
     - .1 router
     - .2 hades (switch)
     - .3 zeus (optiplex)
@@ -36,7 +37,26 @@ Run `sudo service lighttpd restart` to apply change.
     - .10 poseidon (james pc)
     - .20 bobmarley (printer)
 
+- Other hardware names
+    - ares
+    - hephaestus
+    - hercules
+    - perseus
+    - atlas
+    - charon
+    - cronus
+    - helios
+    - hypnos
+    - pan
+    - castor // polux
+    - proemtheus
+
 - VMs
     - hera - 4core 24GB
     - aphrodite - 1core 1GB
-    - persephone - 1core 1GB 
+    - persephone - 1core 1GB
+
+- Other VM names
+    - demeter
+    - athena
+    - hestia
