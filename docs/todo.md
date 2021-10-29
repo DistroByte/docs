@@ -33,9 +33,8 @@ Run `sudo service lighttpd restart` to apply change.
     - .5 dionysus (NAS)
     - .6 apollo (raspi 4b)
     - .7 artemis (raspi 4b)
-    - .8 ares (odroid)
-    - .10 poseidon (james pc)
-    - .20 bobmarley (printer)
+    - .10 poseidon (PC)
+    - .11 perseus (Dell Laptop)
 
 - VMs
     - hera - 4core 24GB
@@ -46,7 +45,6 @@ Run `sudo service lighttpd restart` to apply change.
     - ares
     - hephaestus
     - hercules
-    - perseus
     - atlas
     - charon
     - cronus
