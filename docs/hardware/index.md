@@ -1,8 +1,8 @@
-# Hardware
+# Overview
 
 This section contains a broad overview of each host in my homelab.
 
-## Overview
+## Current equipment
 
 As a brief overview, I am running the following hardware:
 
