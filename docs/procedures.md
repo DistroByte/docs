@@ -13,7 +13,7 @@ Most backup scripts follow a similar format.
 2. Copy the new backup to the mounted folder, and find the file size of that backup.
 3. Send a notification to Discord containing the service that was backed up, the file size and the time and date.
 
-These scrips run with cron at the desired backup interval. Each service has a dedicated section on how it is backed up.
+These scripts run with cron at the desired backup interval. Each service has a dedicated section on how it is backed up.
 Refer to those to find out more on a service-by-service breakdown.
 
 ### Step by step**
