@@ -35,6 +35,7 @@ Run `sudo service lighttpd restart` to apply change.
     - .7 artemis (raspi 4b)
     - .10 poseidon (PC)
     - .11 perseus (Dell Laptop)
+    - .12 icarus (Note 9)
 
 - VMs
     - hera - 4core 24GB
@@ -51,7 +52,7 @@ Run `sudo service lighttpd restart` to apply change.
     - helios
     - hypnos
     - pan
-    - castor // polux
+    - castor // pollux
     - proemtheus
 
 - Other VM names
