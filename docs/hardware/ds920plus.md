@@ -1,27 +1,27 @@
 # Synology DS920+ // Dionysus
 
-The Synology DS920+ was my biggest investment for my homelab. It cost upwards of €1,200 for both the server and
-the storage disks. However, this was one of the best investments I've made. It will last for a long time and
-should pay itself back.
+This NAS was one of the best investments in my homelab that I made. It has allowed me learn
+about backups, centralised storage, and is the base for my media services.
 
 ## Hardware
 
-- 4GB RAM
-- 16TB Raw Storage, 10TB Usable RAID 5
 - 1x Intel(R) Celeron(R) J4125 CPU @ 2.00GHz
+- 20GB RAM
+- 16TB Raw Storage, 10TB Usable RAID 5
 
 ## Services
 
 The services running on the Synology DS920+ are listed here. This list is updated frequently.
 
-| Service Name |
-| ------------ |
-| [heimdall](http://dionysus) (home/landing page) |
-| [deluge](http://dionysus:8112) |
-| [jackett](http://dionysus:9117) |
-| [plex](http://dionysus:5190) |
-| [sonarr](http://dionysus:8989) |
-| [radarr](http://dionysus:7878) |
+| Service Name                              | Description       |
+| ----------------------------------------- | ----------------- |
+| [Heimdall](https://homelab.dbyte.xyz)     | home/landing page |
+| [ruTorrent](http://dionysus:8112)         | download client   |
+| [Jackett](http://dionysus:9117)           | torrent indexer   |
+| [Plex](https://app.plex.tv/#/)            | Plex homepage     |
+| [Sonarr](http://dionysus:8989)            | TV show manager   |
+| [Radarr](http://dionysus:7878)            | movie manager     |
+| [Fileshare](https://fileshare.dbyte.xyz/) | file sharing      |
 
 ## Images
 

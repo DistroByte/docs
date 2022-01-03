@@ -39,10 +39,10 @@ theme:
         name: Switch to light mode
 
   shortcuts:
-    help: 191    # ?
-    next: 78     # n
+    help: 191 # ?
+    next: 78 # n
     previous: 80 # p
-    search: 83   # s
+    search: 83 # s
 
   nav_style: light
 
@@ -62,27 +62,32 @@ markdown_extensions:
   - tables
   - admonition
   - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
   - Procedures: procedures.md
   - Services:
-    - services/index.md
-    - DDClient: services/ddclient.md
-    - HedgeDoc: services/hedgedoc.md
-    - Media: services/media.md
-    - Nginx: services/nginx.md
-    - Paperless: services/paperless.md
-    - Unifi-Controller: services/unifi-controller.md
+      - services/index.md
+      - DDClient: services/ddclient.md
+      - HedgeDoc: services/hedgedoc.md
+      - Media: services/media.md
+      - Nginx: services/nginx.md
+      - Paperless: services/paperless.md
+      - Unifi-Controller: services/unifi-controller.md
   - Hardware:
-    - hardware/index.md
-    - Dell OptiPlex 7040: hardware/optiplex7040.md
-    - Raspberry Pi: hardware/raspi.md
-    - Synology DS920+: hardware/ds920plus.md
-    - Ubiquiti Switch: hardware/switch.md
-    - PC: hardware/pc.md
+      - hardware/index.md
+      - Dell OptiPlex 7040: hardware/optiplex7040.md
+      - Raspberry Pi: hardware/raspi.md
+      - Synology DS920+: hardware/ds920plus.md
+      - Ubiquiti Switch: hardware/switch.md
+      - PC: hardware/pc.md
   - Images:
-    - images/index.md
+      - images/index.md
   - Todo: todo.md
 
 extra:
