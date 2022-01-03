@@ -1,3 +1,9 @@
 {
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "markdownlint.config": {
+    "indentation": true,
+    "ul-indent": true,
+    "MD007": { "indent": 2 }
+  }
 }
