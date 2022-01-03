@@ -6,12 +6,10 @@ These docs will serve as both a reference for me, and a possible place for peopl
 
 ## Contact
 
-If you would like to get in contact with me, you can contact me on:
+If you would like to get in contact with me, you can contact me via:
 
-| Platform | Username                 |
-| -------- | ------------------------ |
-| Discord  | [DistroByte#0001](https://discordapp.com/users/180375991133143040) |
-| Email    | [jamesthackett1@gmail.com](mailto:jamesthackett1@gmail.com) |
+[Discord](https://discordapp.com/users/180375991133143040)
+[Email](mailto:james@distrobyte.io) |
 
 ## Projects
 
