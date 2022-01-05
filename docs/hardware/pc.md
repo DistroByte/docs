@@ -11,10 +11,10 @@ I have plenty of photos of the computer in various stages of assembly.
 - 1x Nvidia GeForce 1660ti ITX
 - 2x 16GB 3600MHz RAM
 - 1x 512GB M.2 NVME SSD
-  - Windows Boot Drive
+    - Windows Boot Drive
 - 2x 1TB Samsung 970 EVO SSD
-  - 1x Windows Game Drive
-  - 1x Ubuntu Install
+    - 1x Windows Game Drive
+    - 1x Ubuntu Install
 - 1x MSI B450i Motherboard
 - 1x 500w Flex ATX PSU
 
