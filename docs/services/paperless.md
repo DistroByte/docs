@@ -3,7 +3,8 @@
 Paperless-ng is running on Hermes in a docker container. Paperless-ng is
 a place where scanned documents like bills and statements can be stored to reduce the amount of paper in use. It can
 automatically tag a new document when it arrives and provides OCR on the document to allow it to be searched easily.
-It is available [here](https://paperless.james-hackett.ie).
+
+It's available [here](https://paperless.james-hackett.ie).
 
 Paperless-ng is a variation on the original [paperless](https://github.com/the-paperless-project/paperless) project,
 which was archived. The container and its dependencies are installed with a
@@ -19,7 +20,7 @@ database directly. This is then backed up to Dionysus.
 
 The `docker-compose.yml` file looks like this:
 
-```yml
+```yaml
 version: "3.4"
 services:
   broker:

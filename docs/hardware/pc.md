@@ -5,41 +5,11 @@ build in, but as hardware gets bigger, more power hungy and hotter, this form fa
 
 I have plenty of photos of the computer in various stages of assembly.
 
-## Hardware
+## Specifications
 
-- 1x Ryzen 5 3600 CPU @ 3.6GHz, 4.2GHz Boost
-- 1x Nvidia GeForce 1660ti ITX
-- 2x 16GB 3600MHz RAM
-- 1x 512GB M.2 NVME SSD
-    - Windows Boot Drive
-- 2x 1TB Samsung 970 EVO SSD
-    - 1x Windows Game Drive
-    - 1x Ubuntu Install
-- 1x MSI B450i Motherboard
-- 1x 500w Flex ATX PSU
-
-## Peripherals
-
-### Sound Based Peripherals
-
-- 1x Presonus AudioBox USB 96
-- 1x Audio-Technica AT2020 Condenser Microphone
-- 2x SwisSonic ASM5
-- 1x JAM Vinyl Turntable
-
-### Keyboard + Mouse
-
-- Keychron K6 Wireless Mechanical Keyboard
-- Logitech G703 Lightspeed
-
-### Monitors
-
-- 1x 34" Xiaomi 1440p 144hz Ultrawide Monitor
-
-### Extras
-
-- XBOX One Controller
-- Wireless Numpad
+| CPU          | GPU        | RAM          | Storage | OS                      | Hostname |
+| ------------ | ---------- | ------------ | ------- | ----------------------- | -------- |
+| Ryzen 5 3600 | GTX 1660ti | 32GB 3200MHz | 2.5TB   | Windows 10/Ubuntu 20.04 | Poseidon |
 
 ## Images
 

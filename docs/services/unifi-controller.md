@@ -7,29 +7,33 @@ This container is built from the [linuxserver/unifi-controller](https://hub.dock
 
 ## Configuration
 
-The docker-compose file for this container is located at `/etc/docker-compose/unifi` on Hermes.
+=== "Docker Compose"
 
-```yaml
-version: "2.1"
+    The docker-compose file for this container is located at
+    `/etc/docker-compose/unifi` on Hermes.
 
-services:
-  unifi-controller:
-    image: ghcr.io/linuxserver/unifi-controller
-    container_name: unifi
-    environment:
-      - PUID=1000
-      - PGID=1000
-    volumes:
-      - /etc/docker-compose/unifi/config:/config
-    ports:
-      - 3478:3478/udp
-      - 10001:10001/udp
-      - 8080:8080/tcp
-      - 8443:8443/tcp
-    restart: unless-stopped
-```
+    The actual config for the controller is located in the same directory as the
+    compose file.
 
-The actual config for the controller is located in the same directory as the compose file.
+    ```yaml
+    version: "2.1"
+
+    services:
+    unifi-controller:
+        image: ghcr.io/linuxserver/unifi-controller
+        container_name: unifi
+        environment:
+        - PUID=1000
+        - PGID=1000
+        volumes:
+        - /etc/docker-compose/unifi/config:/config
+        ports:
+        - 3478:3478/udp
+        - 10001:10001/udp
+        - 8080:8080/tcp
+        - 8443:8443/tcp
+        restart: unless-stopped
+    ```
 
 ## Backup Strategy
 
@@ -43,7 +47,7 @@ Cron calls this script when it runs:
 ```bash
 #!/bin/bash
 
-file=$(find /etc/docker-compose/unifi/config/data/backup/autobackup/* -type f 
+file=$(find /etc/docker-compose/unifi/config/data/backup/autobackup/* -type f
 -ctime -1 | grep ".*\.unf$")
 
 if test -f "$file"; then
@@ -54,8 +58,8 @@ if test -f "$file"; then
     filesize=$(du -sh $file | cut -f1 | xargs | sed 's/$//')
 
     curl -H "Content-Type: application/json" -d '{"content": "-----------------\n
-    **Unifi Backup**\n-----------------\n`Unifi` has just been backed up!\nFile 
-    size: `'"$filesize"'`\nDate: `'"$(TZ=Europe/Dublin date)"'`"}' 
+    **Unifi Backup**\n-----------------\n`Unifi` has just been backed up!\nFile
+    size: `'"$filesize"'`\nDate: `'"$(TZ=Europe/Dublin date)"'`"}'
     https://canary.discord.com/api/webhooks/$webhook_url
 fi
 ```
