@@ -115,6 +115,7 @@ nav:
       - Synology DS920+: hardware/ds920plus.md
       - Ubiquiti Switch: hardware/switch.md
       - PC: hardware/pc.md
+      - Laptop: hardware/laptop.md
   - Images:
       - images/index.md
   - Todo: todo.md

@@ -1,11 +1,6 @@
 {
     "editor.tabSize": 4,
     "prettier.tabWidth": 4,
-    "markdownlint.config": {
-        "indentation": true,
-        "ul-indent": true,
-        "MD007": { "indent": 4 }
-    },
     "editor.codeActionsOnSave": {
         "source.fixAll.markdownlint": true
     }

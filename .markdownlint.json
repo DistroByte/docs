@@ -9,5 +9,8 @@
     "code_blocks": true
   },
   "no-hard-tabs": false,
-  "MD024": false
+  "MD024": false,
+  "indentation": true,
+  "ul-indent": true,
+  "MD046": false
 }
