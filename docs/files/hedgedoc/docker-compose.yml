@@ -1,0 +1,60 @@
+version: '3'
+services:
+    database:
+        container_name: hedgedoc-database
+        image: postgres:9.6-alpine
+        environment:
+            - POSTGRES_USER=hedgedoc
+            - POSTGRES_PASSWORD=password
+            - POSTGRES_DB=hedgedoc
+        volumes:
+            - database:/var/lib/postgresql/data
+        networks:
+        backend:
+        restart: always
+
+    app:
+        container_name: hedgedoc-frontend
+        image: quay.io/hedgedoc/hedgedoc:1.7.2
+        environment:
+            - CMD_IMAGE_UPLOAD_TYPE=imgur
+            - CMD_IMGUR_CLIENTID=fe790a1b5b9f642
+            - CMD_ALLOW_FREEURL=true
+            - CMD_DEFAULT_PERMISSION=private
+            - CMD_DB_URL=postgres://hedgedoc:password@database:5432/hedgedoc
+            - CMD_DOMAIN=md.james-hackett.ie
+            - CMD_HSTS_PRELOAD=true
+            - CMD_USECDN=true
+            - CMD_PROTOCOL_USESSL=true
+            - CMD_URL_ADDPORT=false
+        volumes:
+            - uploads:/hedgedoc/public/uploads
+        ports:
+            - '127.0.0.1:3000:3000'
+        labels:
+            - 'traefik.frontend.headers.STSSeconds=63072000'
+            - 'traefik.frontend.headers.browserXSSFilter=true'
+            - 'traefik.frontend.headers.contentTypeNosniff=true'
+            - 'traefik.frontend.headers.customResponseHeaders=alt-svc:h2=l3sb47bzhpbelafss42pspxzqo3tipuk6bg7nnbacxdfbz7ao6semtyd.onion:443; ma=2592000'
+            - 'traefik.enable=true'
+            - 'traefik.port=3000'
+            - 'traefik.docker.network=traefik_web'
+            - 'traefik.http.routers.md.rule=Host(`md.james-hackett.ie`)'
+            - 'traefik.http.routers.md.tls=true'
+            - 'traefik.http.routers.md.tls.certresolver=lets-encrypt'
+        networks:
+            - backend
+            - traefik_web
+        restart: always
+        depends_on:
+            - database
+
+networks:
+    traefik_web:
+        external: true
+    backend:
+        external: false
+
+volumes:
+    database:
+    uploads:
