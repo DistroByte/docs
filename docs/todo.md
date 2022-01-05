@@ -18,37 +18,48 @@ Run `sudo service lighttpd restart` to apply change.
 
 ## Network Topology
 
-- Hardware
-    - .1 router
-    - .2 hades (switch)
-    - .3 zeus (optiplex)
-    - .4 hermes (optiplex)
-    - .5 dionysus (NAS)
-    - .6 apollo (raspi 4b)
-    - .7 artemis (raspi 4b)
-    - .10 poseidon (PC)
-    - .11 perseus (Dell Laptop)
-    - .12 icarus (Galaxy Note 9)
+### Hardware
 
-- VMs
-    - hera - 4core 24GB
-    - aphrodite - 1core 1GB
-    - persephone - 1core 1GB
+- .1 router
+- .2 hades (switch)
+- .3 zeus (optiplex)
+- .4 hermes (optiplex)
+- .5 dionysus (NAS)
+- .6 apollo (raspi 4b)
+- .7 artemis (raspi 4b)
+- .10 poseidon (PC)
+- .11 perseus (Dell Laptop)
+- .12 icarus (Galaxy Note 9)
 
-- Other hardware names
-    - ares
-    - hephaestus
-    - hercules
-    - atlas
-    - charon
-    - cronus
-    - helios
-    - hypnos
-    - pan
-    - castor // polux
-    - proemtheus
+### VMs
 
-- Other VM names
-    - demeter
-    - athena
-    - hestia
+- hera - 4core 24GB
+- aphrodite - 1core 1GB
+- persephone - 1core 1GB
+
+### Other hardware names
+
+- ares
+- hephaestus
+- hercules
+- atlas
+- charon
+- cronus
+- helios
+- hypnos
+- pan
+- castor // polux
+- proemtheus
+
+### Other VM names
+
+- demeter
+- athena
+- hestia
+
+## Next PC Build
+
+Case: SSUPD Meshalicious
+CPU: Ryzen 5 3600
+GPU: GeForce GTX 1660ti
+RAM: 32GB
