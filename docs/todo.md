@@ -30,6 +30,7 @@ Run `sudo service lighttpd restart` to apply change.
 - .10 poseidon (PC)
 - .11 perseus (Dell Laptop)
 - .12 icarus (Galaxy Note 9)
+- (.xxx) castor (Unifi AP Lite 6)
 
 ### VMs
 
@@ -48,8 +49,8 @@ Run `sudo service lighttpd restart` to apply change.
 - helios
 - hypnos
 - pan
-- castor // polux
-- proemtheus
+- polux
+- prometheus
 
 ### Other VM names
 
