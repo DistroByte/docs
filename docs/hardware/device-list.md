@@ -43,6 +43,7 @@ _List of current hardware on network that includes network equipment, computer a
 | Device Name                              | # Ports   | Type   | Hostname |
 | ---------------------------------------- | --------- | ------ | -------- |
 | [Ubiquiti 16 Switch PoE Lite](switch.md) | 16/8x PoE | Switch | Hades    |
+| Ubiquiti AP WiFi 6                       | N/A       | AP     | Castor   |
 
 ### Router Details
 
