@@ -17,16 +17,16 @@ _List of current hardware on network that includes network equipment, computer a
 
 ### Laptops
 
-| Device Name                | CPU          | RAM      | OS         |
-| -------------------------- | ------------ | -------- | ---------- |
-| [Dell Inspiron](laptop.md) | Ryzen 5 550U | 8GB DDR4 | Windows 11 |
+| Device Name                | CPU          | RAM      | OS         | Hostname |
+| -------------------------- | ------------ | -------- | ---------- | -------- |
+| [Dell Inspiron](laptop.md) | Ryzen 5 550U | 8GB DDR4 | Windows 11 | perseus  |
 
 ### Tablets and Mobile Devices
 
-| Device Name   | OS         | Form Factor |
-| ------------- | ---------- | ----------- |
-| Galaxy Note 9 | Android 10 | Phone       |
-| Galaxy Watch  | Tizen      | Wearable    |
+| Device Name       | OS         | Form Factor |
+| ----------------- | ---------- | ----------- |
+| Galaxy Note 9     | Android 10 | Phone       |
+| Galaxy Watch 46mm | Tizen      | Wearable    |
 
 ### Connected Home Devices & Speakers
 
