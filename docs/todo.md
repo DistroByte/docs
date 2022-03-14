@@ -18,7 +18,7 @@ Run `sudo service lighttpd restart` to apply change.
 
 ## Network Topology
 
-![Network Topology](https://i.dbyte.xyz/firefox_4VOKIJDWE.png)
+![Network Topology](https://i.dbyte.xyz/firefox_Rpz0o5ONP.png)
 
 ### Hardware
 
