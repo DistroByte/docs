@@ -3,7 +3,7 @@
 I run quite a large stack for downloading, indexing and watching media over the internt. All of these
 services run on Dionysus. The stack includes:
 
-- [Deluge](#deluge)
+- [ruTorrent](#rutorrent)
 - [OpenVPN](#openvpn)
 - [Sonarr/Radarr](#sonarrradarr)
 - [Overseerr](#overseerr)
@@ -30,29 +30,28 @@ the service needs is created before starting the containers.
 I won't dive into each individual service's configuration, that will be done on their respective pages. This will just
 contain the basics of how to get the service running.
 
-## Deluge
+## ruTorrent
 
-Deluge is a torrenting client with some nice features over other torrenting clients of similar standing. I'm
-using the container from [linuxserver/deluge](https://hub.docker.com/r/linuxserver/deluge). There is a compose file on that
-page, but I had to adapt mine slightly to make use of the VPN I wanted to use.
+ruToorent is a torrenting client with some nice features over other torrenting clients of similar standing. I'm
+using the container from [linuxserver/rutorrent](https://hub.docker.com/r/linuxserver/rutorrent). There is a compose
+file on that page, but I had to adapt mine slightly to make use of the VPN I wanted to use.
 
 ### Configuration
 
 The `docker-compose.yml` file is quite sparse, but it does not have to be complicated.
 
 ```yml
-deluge:
-    container_name: deluge
-    image: linuxserver/deluge
-    restart: unless-stopped
-    network_mode: service:vpn
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - TZ=${TIMEZONE}
-    volumes:
-      - ${ROOT}/downloads:/downloads
-      - ${ROOT}/config/deluge:/config
+rutorrent:
+  image: linuxserver/rutorrent
+  container_name: rutorrent
+  network_mode: service:vpn
+  environment:
+    - PUID=${PUID}
+    - PGID=${PGID}
+  volumes:
+    - ${ROOT}/config/rutorrent:/config
+    - ${ROOT}/downloads:/downloads
+  restart: always
 ```
 
 **NOTE** This is just a snippet of the whole file, see below for the entire file.
@@ -79,19 +78,20 @@ The `docker-compose.yml` file is quite sparse here, but it does not have to be c
 
 ```yml
 vpn:
-    container_name: vpn
-    image: dperson/openvpn-client
-    cap_add:
-      - net_admin
-    restart: unless-stopped
-    volumes:
-      - /dev/net:/dev/net:z
-      - ${ROOT}/config/vpn:/vpn
-    security_opt:
-      - label:disable
-    ports:
-      - 8112:8112
-    command: '-f "" -r 192.168.1.0/24'
+  container_name: vpn
+  image: dperson/openvpn-client
+  cap_add:
+    - net_admin
+  restart: always
+  volumes:
+    - /dev/net:/dev/net:z
+    - ${ROOT}/config/vpn:/vpn
+  security_opt:
+    - label:disable
+  ports:
+    - 8111:80
+    - 9117:9117
+  command: '-f "" -r 192.168.1.0/24'
 ```
 
 **NOTE** This is just a snippet of the whole file, see below for the entire file.
@@ -140,34 +140,34 @@ The `docker-compose.yml` file is quite sparse here, but it does not have to be c
 
 ```yml
 sonarr:
-    container_name: sonarr
-    image: linuxserver/sonarr
-    restart: unless-stopped
-    network_mode: host
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - TZ=${TIMEZONE}
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ${ROOT}/config/sonarr:/config
-      - ${ROOT}/downloads:/downloads
-      - /volume1/media/tv:/tv
+  container_name: sonarr
+  image: linuxserver/sonarr
+  restart: always
+  network_mode: host
+  environment:
+    - PUID=${PUID}
+    - PGID=${PGID}
+    - TZ=${TIMEZONE}
+  volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ${ROOT}/config/sonarr:/config
+    - /volume1/media/tv:/tv
+    - ${ROOT}/downloads:/downloads
 
 radarr:
-    container_name: radarr
-    image: linuxserver/radarr
-    restart: unless-stopped
-    network_mode: host
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - TZ=${TIMEZONE}
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ${ROOT}/config/radarr:/config
-      - ${ROOT}/downloads:/downloads
-      - /volume1/media/movies:/movies
+  container_name: radarr
+  image: linuxserver/radarr
+  restart: always
+  network_mode: host
+  environment:
+    - PUID=${PUID}
+    - PGID=${PGID}
+    - TZ=${TIMEZONE}
+  volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ${ROOT}/config/radarr:/config
+    - ${ROOT}/downloads:/downloads
+    - /volume1/media/movies:/movies
 ```
 
 **NOTE** This is just a snippet of the whole file, see below for the entire file.
@@ -189,15 +189,15 @@ The `docker-compose.yml` file is quite sparse here, but it does not have to be c
 
 ```yml
 overseerr:
-    container_name: overseerr
-    image: linuxserver/overseerr
-    restart: unless-stopped
-    ports:
-      - 5055:5055
-    environment:
-      - TZ=${TIMEZONE}
-    volumes:
-      - ${ROOT}/config/overseerr:/app/config
+  container_name: overseerr
+  image: linuxserver/overseerr
+  restart: unless-stopped
+  ports:
+    - 5055:5055
+  environment:
+    - TZ=${TIMEZONE}
+  volumes:
+    - ${ROOT}/config/overseerr:/app/config
 ```
 
 **NOTE** This is just a snippet of the whole file, see below for the entire file.
@@ -218,18 +218,18 @@ The `docker-compose.yml` file is quite sparse here, but it does not have to be c
 
 ```yml
 jackett:
-    container_name: jackett
-    image: linuxserver/jackett
-    restart: unless-stopped
-    network_mode: host
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - TZ=${TIMEZONE}
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - ${ROOT}/downloads/blackhole:/downloads
-      - ${ROOT}/config/jackett:/config
+  container_name: jackett
+  image: linuxserver/jackett
+  restart: always
+  network_mode: service:vpn
+  environment:
+    - PUID=${PUID}
+    - PGID=${PGID}
+    - TZ=${TIMEZONE}
+  volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ${ROOT}/downloads/blackhole:/downloads
+    - ${ROOT}/config/jackett:/config
 ```
 
 **NOTE** This is just a snippet of the whole file, see below for the entire file.
@@ -251,17 +251,17 @@ The `docker-compose.yml` file is quite sparse here, but it does not have to be c
 
 ```yml
 plex:
-    container_name: plex
-    image: plexinc/pms-docker
-    restart: unless-stopped
-    network_mode: host
-    environment:
-      - TZ=${TIMEZONE}
-      - PLEX_CLAIM=${PLEX_CLAIM}
-    volumes:
-      - ${ROOT}/config/plex/db:/config
-      - ${ROOT}/config/plex/transcode:/transcode
-      - /volume1/media:/data
+  container_name: plex
+  image: plexinc/pms-docker
+  restart: unless-stopped
+  network_mode: host
+  environment:
+    - TZ=${TIMEZONE}
+    - PLEX_CLAIM=${PLEX_CLAIM}
+  volumes:
+    - ${ROOT}/config/plex/db:/config
+    - ${ROOT}/config/plex/transcode:/transcode
+    - /volume1/media:/data
 ```
 
 **NOTE** This is just a snippet of the whole file, see below for the entire file.
@@ -282,18 +282,18 @@ The `docker-compose.yml` file is quite sparse here, but it does not have to be c
 
 ```yml
 tautulli:
-    container_name: tautulli
-    image: tautulli/tautulli
-    restart: unless-stopped
-    network_mode: host
-    volumes:
-      - ${ROOT}/config/tautilli:/config
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-      - TZ=${TIMEZONE}
-    ports:
-      - 8181:8181
+  container_name: tautulli
+  image: tautulli/tautulli
+  restart: unless-stopped
+  network_mode: host
+  volumes:
+    - ${ROOT}/config/tautilli:/config
+  environment:
+    - PUID=${PUID}
+    - PGID=${PGID}
+    - TZ=${TIMEZONE}
+  ports:
+    - 8181:8181
 ```
 
 **NOTE** This is just a snippet of the whole file, see below for the entire file.
@@ -302,3 +302,98 @@ tautulli:
 
 This config is backed up by default as it exists on Dionysus, however, I plan to make offsite backups and this
 configuration would be included in it.
+
+## Entire File
+
+```yaml
+version: '3.7'
+
+services:
+  vpn:
+    container_name: vpn
+    image: dperson/openvpn-client
+    cap_add:
+      - net_admin
+    restart: always
+    volumes:
+      - /dev/net:/dev/net:z
+      - ${ROOT}/config/vpn:/vpn
+    security_opt:
+      - label:disable
+    ports:
+      - 8111:80
+      - 9117:9117
+    command: '-f "" -r 192.168.1.0/24'
+
+  plex:
+    container_name: plex
+    image: plexinc/pms-docker:beta
+    restart: always
+    network_mode: host
+    environment:
+      - TZ=${TIMEZONE}
+      - PLEX_CLAIM=${PLEX_CLAIM}
+    volumes:
+      - ${ROOT}/config/plex/db:/config
+      - ${ROOT}/config/plex/transcode:/transcode
+      - /volume1/media:/data
+    devices:
+      - /dev/dri:/dev/dri
+
+  sonarr:
+    container_name: sonarr
+    image: linuxserver/sonarr
+    restart: always
+    network_mode: host
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMEZONE}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${ROOT}/config/sonarr:/config
+      - /volume1/media/tv:/tv
+      - ${ROOT}/downloads:/downloads
+
+  radarr:
+    container_name: radarr
+    image: linuxserver/radarr
+    restart: always
+    network_mode: host
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMEZONE}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${ROOT}/config/radarr:/config
+      - ${ROOT}/downloads:/downloads
+      - /volume1/media/movies:/movies
+
+  jackett:
+    container_name: jackett
+    image: linuxserver/jackett
+    restart: always
+    network_mode: service:vpn
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TIMEZONE}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${ROOT}/downloads/blackhole:/downloads
+      - ${ROOT}/config/jackett:/config
+
+  rutorrent:
+    image: linuxserver/rutorrent
+    container_name: rutorrent
+    network_mode: service:vpn
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+    volumes:
+      - ${ROOT}/config/rutorrent:/config
+      - ${ROOT}/downloads:/downloads
+    restart: always
+
+```

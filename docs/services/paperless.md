@@ -3,8 +3,7 @@
 Paperless-ng is running on Hermes in a docker container. Paperless-ng is
 a place where scanned documents like bills and statements can be stored to reduce the amount of paper in use. It can
 automatically tag a new document when it arrives and provides OCR on the document to allow it to be searched easily.
-
-It's available [here](https://paperless.james-hackett.ie).
+It is available [here](https://paperless.dbyte.xyz).
 
 Paperless-ng is a variation on the original [paperless](https://github.com/the-paperless-project/paperless) project,
 which was archived. The container and its dependencies are installed with a
@@ -67,7 +66,7 @@ volumes:
   pgdata:
 ```
 
-Nginx reverse proxies `paperless.james-hackett.ie` to port `8000`, this is the config for it.
+Nginx reverse proxies `paperless.dbyte.xyz` to port `8000`, this is the config for it.
 
 ```nginx
 map $http_upgrade $connection_upgrade {
