@@ -26,6 +26,7 @@ _List of current hardware on network that includes network equipment, computer a
 | Device Name       | OS         | Form Factor |
 | ----------------- | ---------- | ----------- |
 | Galaxy Note 9     | Android 10 | Phone       |
+| Galaxy S22 Ultra  | Android 12 | Phone       |
 | Galaxy Watch 46mm | Tizen      | Wearable    |
 
 ### Connected Home Devices & Speakers
