@@ -22,7 +22,7 @@ Refer to those to find out more on a service-by-service breakdown.
 2. Run `sudo apt install cifs-utils`
 3. Run `mount -t cifs -o username=distro "\\\\dionysus\\backups\\[service]" '/location/of/backup'`
 4. Edit `/etc/fstab` to contain connection settings `//dionysus/backups/[service] /location/of/backup cifs credentials=/etc/win-credentials, file_mode=0755,dir_mode=0755 0 0`
-5. Create /etc/win-credentials and add `username=[username] password=password`
+5. Create `/etc/win-credentials` and add `username=[username] password=password`
 6. Create a script to notify Discord and remove old backups.
 
 ## Restoring A Backup
