@@ -137,4 +137,4 @@ extra:
     analytics:
         provider: plausible
         domain: docs.james-hackett.ie
-        src: "https://plausible.dbyte.xyz/js/plausible.js"
+        src: "https://plausible.dbyte.xyz/js/script.js"
