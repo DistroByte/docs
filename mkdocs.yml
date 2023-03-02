@@ -52,7 +52,9 @@ theme:
         - minify:
           minify_html: true
         - git-revision-date
-        - material-plausible
+
+plugins:
+    - material-plausible
 
 markdown_extensions:
     - admonition
