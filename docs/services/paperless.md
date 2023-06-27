@@ -33,4 +33,5 @@ if test "$file"; then
   exit 0
 else
   curl -H "Content-Type: application/json" -d '{"content": "`Paperless` backup has just **FAILED**\nFile size: `'"$file"'`\nDate: `'"$(TZ=Europe/Dublin date)"'`"}' https://canary.discord.com/api/webhooks/$webhook_url
+fi
 ```
