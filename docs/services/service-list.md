@@ -9,17 +9,14 @@ In theory, I should be able to recreate my entire service stack from these docs 
 
 - DDClient
 - HedgeDoc
-- Media Stack
-    - Deluge
-    - OpenVPN
-    - Sonarr/Radarr
-    - Overseerr
-    - Jackett
-    - Plex
-    - Tautilli
-- Paperless-ng
+- ruTorrent
+- OpenVPN
+- Sonarr/Radarr
+- Overseerr
+- Jackett
+- Plex
+- Tautilli
+- Paperless-ngx
 - Unifi-Controller
-- Heimdall
-- Portainer
-- Nginx
+- Homarr
 - Pihole
