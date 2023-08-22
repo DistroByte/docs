@@ -1,12 +1,12 @@
-# Raspberry Pi // Apollo + Artemis
+# Raspberry Pis
 
 The standard device in almost any homelab, you can never have enough of them until you have too many.
-Luckily for me I only have 2. They both have PoE+ hats that allow them to be connected to the internet
+I have 4. They all have PoE+ hats that allow them to be connected to the internet
 and get power with one cable.
 
 | CPU                    | RAM | Storage        | OS          | Extras   |
 | ---------------------- | --- | -------------- | ----------- | -------- |
-| Broadcom BCM2711 (ARM) | 2GB | 16GB USB Drive | Raspbian 10 | PoE+ Hat |
+| Broadcom BCM2711 (ARM) | 2GB | 16GB USB Drive | Raspbian 11 | PoE+ Hat |
 
 ## Services
 

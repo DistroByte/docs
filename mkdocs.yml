@@ -103,6 +103,7 @@ nav:
   - Home: index.md
   - Procedures: procedures.md
   - Services:
+      - Services: services/index.md
       - HedgeDoc: services/hedgedoc.md
       - DDClient: services/ddclient.md
       - Media: services/media.md

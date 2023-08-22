@@ -39,21 +39,17 @@ with your cloudflare account, and an API key to authorize itself.
     home.james-hackett.ie
 
     # dbyte.xyz
-    login=[super secret email address]
-    password=[super secret API key]
     zone=dbyte.xyz
     dbyte.xyz
 
     # distrobyte.xyz
-    login=[super secret email address]
-    password=[super secret API key]
     zone=distrobyte.xyz
     distrobyte.xyz
     ```
 
 === "Nomad"
 
-    The job file is located at [`ddclient.hcl`](https://github.com/DistroByte/nomad/blob/master/ddclient.hcl).
+    The job file is located at [`ddclient.hcl`](https://github.com/DistroByte/nomad/blob/master/jobs/ddclient.hcl).
 
     ```hcl
     job "ddclient" {
@@ -68,12 +64,9 @@ with your cloudflare account, and an API key to authorize itself.
           config {
             image = "lscr.io/linuxserver/ddclient:latest"
 
-            mount {
-            type = "bind"
-            target = "/config"
-            source = "/data/ddclient"
-            readonly = true
-            }
+			volumes = [
+			  "/data/ddclient:/config"
+			]
           }
         }
       }

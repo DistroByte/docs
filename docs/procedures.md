@@ -4,7 +4,7 @@ This section will document general procedures on how my homelab functions.
 
 ## Backups
 
-In general, anything that needs a backup is stored in `/volume1/backups/[service]` on [Dionysus](hardware/synology-nas.md).
+In general, anything that needs a backup is stored in `/volume1/backups/[service]` on [Dionysus](synology-nas.md).
 This is a 1TB folder which is encrypted on the NAS.
 
 Most backup scripts follow a similar format.
