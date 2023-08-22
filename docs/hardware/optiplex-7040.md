@@ -5,34 +5,16 @@ and combined have 16GB of RAM. These servers were the first of my actual hardwar
 
 ## Specifications
 
-| CPU            | RAM | Storage   | OS           | Hostname |
-| -------------- | --- | --------- | ------------ | -------- |
-| Intel i5-6500T | 8GB | 250GB SSD | Ubuntu 20.04 | Zeus     |
-| Intel i5-6500T | 8GB | 500GB HDD | Ubuntu 20.04 | Hermes   |
+| CPU            | RAM | Storage   | OS        | Hostname |
+| -------------- | --- | --------- | --------- | -------- |
+| Intel i5-6500T | 8GB | 250GB SSD | Debian 12 | zeus     |
+| Intel i5-6500T | 8GB | 250GB SSD | Debian 12 | hermes   |
 
 ## Services
 
-The services running on the Dell OptiPlexes are listed here. This list is updated frequently.
-
-As my HomeLab has two quite similar Dell OptiPlexes, it can run many services in a hot-hot/hot-cold format.
-When listing what services are running, the hostname will be listed beside it.
-
-| Service Name     | Description                                     | Highly Available? | Host   |
-| ---------------- | ----------------------------------------------- | ----------------- | ------ |
-| Traefik          | Reverse Proxy manager                           |                   | Hermes |
-| Unifi Controller | Controls and manages the Ubuiquiti Switch       |                   | Hermes |
-| Paperless-ng     | Document storage                                |                   | Hermes |
-| HedgeDoc         | Collaborative Markdown Editor                   |                   | Hermes |
-| ddclient         | IP address updater for Cloudflare               |                   | Hermes |
-| Tautulli         | Plex statistic tracker                          |                   | Hermes |
-| Overseerr        | Friendly user interface for Movies and TV shows |                   | Hermes |
-| Home Assistant   | Home Automation Software                        |                   | Hermes |
-| OpenVPN          | VPN for connecting to Homelab from the internet |                   | Zeus   |
-
-!!!info
-
-    Anything marked as Highly Available is run in either a hot-hot or hot-cold
-    setup depending on the importance of the service.
+Both of these servers are part of a nomad datacentre that alloctes jobs on any available node according to the
+scheduler. You can find out more about the service running in this cluster
+[here](https://github.com/DistroByte/nomad).
 
 ## Notes
 

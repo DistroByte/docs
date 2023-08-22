@@ -22,16 +22,16 @@ copied into the mounted folder and a notification to Discord is sent.
 ```bash
 #!/bin/bash
 
-docker exec paperless_webserver_1 bash document_exporter ../export
+# $file - location of the mounted export dir in the paperless container - see
+# here: https://github.com/DistroByte/nomad/blob/master/paperless.hcl#L54
 
-file=$(du -sh /etc/docker-compose/paperless-ng/export/ | cut -f1 | xargs |
-sed 's/$//')
+docker exec $(docker ps -aqf "name=^paperless-webserver-*") bash document_exporter ../export
 
-cp -R /etc/docker-compose/paperless-ng/export/ /etc/docker-compose/paperless-ng
-/backup
+file=$(du -sh /data/paperless/export/ | cut -f1 | xargs | sed 's/$//')
 
-curl -H "Content-Type: application/json" -d '{"content": "-----------------\n**
-Paperless Backup**\n-----------------\n`Paperless` has just been backed up!\nFile
-size: `'"$file"'`\nDate: `'"$(TZ=Europe/Dublin date)"'`"}'
-https://canary.discord.com/api/webhooks/$webhook_url
+if test "$file"; then
+  exit 0
+else
+  curl -H "Content-Type: application/json" -d '{"content": "`Paperless` backup has just **FAILED**\nFile size: `'"$file"'`\nDate: `'"$(TZ=Europe/Dublin date)"'`"}' https://canary.discord.com/api/webhooks/$webhook_url
+fi
 ```

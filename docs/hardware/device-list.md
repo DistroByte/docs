@@ -8,9 +8,9 @@ _List of current hardware on network that includes network equipment, computer a
 
 | Device Name                       | CPU            | RAM               | OS                  | Hostname |
 | --------------------------------- | -------------- | ----------------- | ------------------- | -------- |
-| [Gaming PC](pc.md)                | Ryzen 5 3600   | 32GB DDR4 3200MHz | Win 10/Ubuntu 20.04 | Poseidon |
-| [OptiPlex 7040](optiplex-7040.md) | Intel i5-6500T | 8GB DDR4          | Ubuntu 20.04        | Zeus     |
-| [OptiPlex 7040](optiplex-7040.md) | Intel i5-6500T | 8GB DDR4          | Ubuntu 20.04        | Hermes   |
+| [Gaming PC](pc.md)                | Ryzen 5 3600   | 32GB DDR4 3200MHz | Win 11              | Poseidon |
+| [OptiPlex 7040](optiplex-7040.md) | Intel i5-6500T | 8GB DDR4          | Debian 12           | Zeus     |
+| [OptiPlex 7040](optiplex-7040.md) | Intel i5-6500T | 8GB DDR4          | Debian 12           | Hermes   |
 | [Synology NAS](synology-nas.md)   | Intel J4125    | 20GB SoDIMM       | Synology DSM7       | Dionysus |
 | [Raspberry Pi 4](raspberry-pi.md) | BCM2711 (ARM)  | 2GB               | Raspbian 10         | Apollo   |
 | [Raspberry Pi 4](raspberry-pi.md) | BCM2711 (ARM)  | 2GB               | Raspbian 10         | Artemis  |
@@ -20,14 +20,6 @@ _List of current hardware on network that includes network equipment, computer a
 | Device Name                | CPU          | RAM      | OS         | Hostname |
 | -------------------------- | ------------ | -------- | ---------- | -------- |
 | [Dell Inspiron](laptop.md) | Ryzen 5 550U | 8GB DDR4 | Windows 11 | perseus  |
-
-### Tablets and Mobile Devices
-
-| Device Name       | OS         | Form Factor |
-| ----------------- | ---------- | ----------- |
-| Galaxy Note 9     | Android 10 | Phone       |
-| Galaxy S22 Ultra  | Android 12 | Phone       |
-| Galaxy Watch 46mm | Tizen      | Wearable    |
 
 ### Connected Home Devices & Speakers
 

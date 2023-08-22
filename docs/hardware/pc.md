@@ -7,9 +7,9 @@ I have plenty of photos of the computer in various stages of assembly.
 
 ## Specifications
 
-| CPU          | GPU        | RAM          | Storage | OS                      | Hostname |
-| ------------ | ---------- | ------------ | ------- | ----------------------- | -------- |
-| Ryzen 5 3600 | GTX 1660ti | 32GB 3200MHz | 2.5TB   | Windows 10/Ubuntu 20.04 | Poseidon |
+| CPU          | GPU        | RAM          | Storage | OS         | Hostname |
+| ------------ | ---------- | ------------ | ------- | ---------- | -------- |
+| Ryzen 5 3600 | RTX 4070   | 32GB 3200MHz | 2.5TB   | Windows 11 | poseidon |
 
 ## Images
 

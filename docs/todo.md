@@ -3,7 +3,7 @@
 - [The Forest Dedicated Server](https://hub.docker.com/r/jammsen/the-forest-dedicated-server)
 - ELK
     - elastisearch
-    - Kibana
+    - kafka
     - Logstash
 - TICK
     - Telegraf
