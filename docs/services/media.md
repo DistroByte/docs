@@ -69,7 +69,7 @@ configuration would be included in it.
 ## OpenVPN
 
 OpenVPN is what allows my torrenting to be anonymous (whoops, let that one slip). I have it configured to point to the Netherlands
-with [PrivateInternetAccess](privateinternetaccess.com/). I have had no issues with them, and I have it installed on all
+with [PrivateInternetAccess](https://privateinternetaccess.com/). I have had no issues with them, and I have it installed on all
 my devices too. OpenVPN uses the [dperson/openvpn-client](https://github.com/dperson/openvpn-client) container.
 
 ### Configuration
