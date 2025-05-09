@@ -53,9 +53,6 @@ theme:
       minify_html: true
     - git-revision-date
 
-plugins:
-  - material-plausible
-
 markdown_extensions:
   - admonition
   - abbr
@@ -134,7 +131,3 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/james-t-hackett/
       name: Connect with me on LinkedIn
-  analytics:
-    provider: plausible
-    domain: docs.james-hackett.ie
-    src: "https://plausible.dbyte.xyz/js/script.js"
